@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Nieruchomości',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
         accentColor: Colors.pink,
         brightness: Brightness.light,
         fontFamily: 'Open Sans',

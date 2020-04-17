@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SelectableText('Nieruchomości');
+    return SelectableText(
+      'Nieruchomości Warszawa',
+    );
   }
 }

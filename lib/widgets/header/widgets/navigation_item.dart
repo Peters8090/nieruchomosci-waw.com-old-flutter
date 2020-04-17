@@ -22,7 +22,7 @@ class NavigationItem extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        color: active ? Theme.of(context).accentColor : Theme.of(context).primaryColorDark,
+        color: active ? Theme.of(context).accentColor.withOpacity(0.5) : Theme.of(context).accentColor,
         child: Text(
           title,
           style: Theme.of(context).accentTextTheme.headline6.apply(
