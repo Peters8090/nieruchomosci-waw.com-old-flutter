@@ -18,6 +18,16 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         fontFamily: 'Open Sans',
       ),
+      builder: (context, child) => Theme(
+        child: child,
+        data: Theme.of(context).copyWith(
+          textTheme: Theme.of(context).textTheme.apply(
+                fontSizeFactor: MediaQuery.of(context).size.width > 1000
+                    ? 1
+                    : MediaQuery.of(context).size.width / 1000,
+              ),
+        ),
+      ),
       routes: {
         HomePage.routeName: (_) => HomePage(),
         ContactPage.routeName: (_) => ContactPage(),

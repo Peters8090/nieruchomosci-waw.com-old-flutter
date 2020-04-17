@@ -5,6 +5,8 @@ import 'package:nieruchomosci_waw_com/widgets/header/widgets/navigation_item.dar
 import 'package:nieruchomosci_waw_com/widgets/logo.dart';
 
 class Header extends StatelessWidget with PreferredSizeWidget {
+  static const height = kToolbarHeight;
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
