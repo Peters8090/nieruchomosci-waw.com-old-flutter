@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nieruchomosci_waw_com/widgets/utility/responsive_text_theme.dart';
 import 'package:nieruchomosci_waw_com/widgets/header/header.dart';
 
 class HomePage extends StatelessWidget {
@@ -41,21 +42,22 @@ class HomePage extends StatelessWidget {
               horizontal: MediaQuery.of(context).size.width / 10,
               vertical: MediaQuery.of(context).size.height / 10,
             ),
-            child: Column(
-              children: <Widget>[
-                SelectableText(
-                  'Twoje wymarzone nieruchomości',
-                  maxLines: 2,
-                  style: Theme.of(context).accentTextTheme.headline1,
-                ),
-                SelectableText(
-                  'w jednym miejscu',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline2
-                      .apply(color: Colors.grey),
-                ),
-              ],
+            child: ResponsiveTextTheme(
+              builder: (ctx) => Column(
+                children: <Widget>[
+                  SelectableText(
+                    'Twoje wymarzone nieruchomości',
+                    style: Theme.of(ctx).accentTextTheme.headline1,
+                  ),
+                  SelectableText(
+                    'w jednym miejscu',
+                    style: Theme.of(ctx)
+                        .textTheme
+                        .headline2
+                        .apply(color: Colors.grey),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
