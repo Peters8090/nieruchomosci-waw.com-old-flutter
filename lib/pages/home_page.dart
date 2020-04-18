@@ -6,46 +6,40 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
     return Scaffold(
-      appBar: Header(),
+      appBar: Header(true),
+      extendBodyBehindAppBar: true,
       body: Stack(
         children: <Widget>[
           Container(
-            child: Stack(
-              children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.transparent,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                        'https://bi.im-g.pl/im/2b/be/17/z24897067V,Wiezowiec-Warsaw-Spimmmmmre-na-Woli.jpg',
-                      ),
-                    ),
-                  ),
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                  'https://bi.im-g.pl/im/2b/be/17/z24897067V,Wiezowiec-Warsaw-Spimmmmmre-na-Woli.jpg',
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    gradient: LinearGradient(
-                      begin: FractionalOffset.topCenter,
-                      end: FractionalOffset.bottomCenter,
-                      colors: [
-                        Colors.blueGrey.withOpacity(0.8),
-                        Colors.black87,
-                      ],
-                      stops: [0.0, 1.0],
-                    ),
-                  ),
-                )
-              ],
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              gradient: LinearGradient(
+                begin: FractionalOffset.topCenter,
+                end: FractionalOffset.bottomCenter,
+                colors: [
+                  Colors.blueGrey.withOpacity(0.8),
+                  Colors.black87,
+                ],
+                stops: [0.0, 1.0],
+              ),
             ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: mediaQuery.size.width / 10,
-              vertical: mediaQuery.size.height / 10,
+              horizontal: MediaQuery.of(context).size.width / 10,
+              vertical: MediaQuery.of(context).size.height / 10,
             ),
             child: Column(
               children: <Widget>[
