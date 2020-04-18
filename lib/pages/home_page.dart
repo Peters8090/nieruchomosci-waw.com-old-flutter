@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nieruchomosci_waw_com/widgets/header/widgets/app_drawer.dart';
 import 'package:nieruchomosci_waw_com/widgets/utility/responsive_text_theme.dart';
 import 'package:nieruchomosci_waw_com/widgets/header/header.dart';
 
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: Header(true),
       extendBodyBehindAppBar: true,
+      drawer: getAppDrawer(context),
       body: Stack(
         children: <Widget>[
           Container(

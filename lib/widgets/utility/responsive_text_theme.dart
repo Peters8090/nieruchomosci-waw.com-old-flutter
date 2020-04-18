@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 class ResponsiveTextTheme extends StatelessWidget {
   final Function builder;
@@ -7,9 +8,9 @@ class ResponsiveTextTheme extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final modifiedFontSizeFactor = MediaQuery.of(context).size.width > 1000
+    final modifiedFontSizeFactor = MediaQuery.of(context).size.width > mobileBreakpoint
         ? 1
-        : MediaQuery.of(context).size.width / 1000;
+        : MediaQuery.of(context).size.width / mobileBreakpoint;
     
     return Theme(
       child: Child(builder),
