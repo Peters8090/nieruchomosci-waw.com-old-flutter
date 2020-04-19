@@ -7,7 +7,7 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SelectableText(
+    return Text(
       'Nieruchomości Warszawa',
       textAlign: TextAlign.center,
       style: style,

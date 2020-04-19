@@ -47,11 +47,11 @@ class HomePage extends StatelessWidget {
             child: ResponsiveTextTheme(
               builder: (ctx) => Column(
                 children: <Widget>[
-                  SelectableText(
+                  Text(
                     'Twoje wymarzone nieruchomości',
                     style: Theme.of(ctx).accentTextTheme.headline1,
                   ),
-                  SelectableText(
+                  Text(
                     'w jednym miejscu',
                     style: Theme.of(ctx)
                         .textTheme
