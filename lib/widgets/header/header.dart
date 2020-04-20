@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nieruchomosci_waw_com/pages/contact_page.dart';
-import 'package:nieruchomosci_waw_com/pages/home_page.dart';
-import 'package:nieruchomosci_waw_com/widgets/header/widgets/navigation_item.dart';
-import 'package:nieruchomosci_waw_com/widgets/logo.dart';
-import 'package:nieruchomosci_waw_com/widgets/utility/constants.dart';
+
+import '../../pages/contact_page.dart';
+import '../../pages/home_page.dart';
+import '../../widgets/header/widgets/navigation_item.dart';
+import '../../widgets/logo.dart';
+import '../../widgets/utility/constants.dart';
 
 class Header extends StatelessWidget with PreferredSizeWidget {
   static const height = kToolbarHeight;
@@ -18,10 +19,12 @@ class Header extends StatelessWidget with PreferredSizeWidget {
       title: Logo(),
       backgroundColor: transparent ? Colors.transparent : null,
       elevation: transparent ? 0 : null,
-      actions: MediaQuery.of(context).size.width > mobileBreakpoint ? [
-          NavigationItem('Home', HomePage.routeName),
-          NavigationItem('Kontakt', ContactPage.routeName),
-      ] : null,
+      actions: MediaQuery.of(context).size.width > mobileBreakpoint
+          ? [
+              NavigationItem('Home', HomePage.routeName),
+              NavigationItem('Kontakt', ContactPage.routeName),
+            ]
+          : null,
     );
   }
 

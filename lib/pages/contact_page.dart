@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nieruchomosci_waw_com/widgets/header/header.dart';
-import 'package:nieruchomosci_waw_com/widgets/header/widgets/app_drawer.dart';
-import 'package:nieruchomosci_waw_com/widgets/utility/responsive_grid.dart';
+
+import '../widgets/header/header.dart';
+import '../widgets/header/widgets/app_drawer.dart';
+import '../widgets/utility/responsive_grid.dart';
 
 class ContactPage extends StatelessWidget {
   static const routeName = '/kontakt';
@@ -17,12 +18,9 @@ class ContactPage extends StatelessWidget {
             padding: const EdgeInsets.all(50),
             child: Center(
                 child: Text(
-                  'Kontakt',
-                  style: Theme
-                      .of(context)
-                      .textTheme
-                      .headline2,
-                )),
+              'Kontakt',
+              style: Theme.of(context).textTheme.headline2,
+            )),
           ),
           ResponsiveGridRow(
             children: <ResponsiveGridCol>[
@@ -50,27 +48,27 @@ class ContactPage extends StatelessWidget {
                 ),
               ),
               ResponsiveGridCol(
-                  lower: 12,
-                  bigger: 6,
-                  child: Column(
-                    children: <Widget>[
-                      buildListTile(
-                        context,
-                        title: '+48 123 456 789',
-                        icon: Icons.phone,
-                      ),
-                      buildListTile(
-                        context,
-                        title: 'biuro@nieruchomosci-waw.com',
-                        icon: Icons.email,
-                      ),
-                      buildListTile(
-                        context,
-                        title: 'Numer konta: 12 1234 1234 1234 1234 1234 1234',
-                        icon: Icons.attach_money,
-                      ),
-                    ],
-                  ),
+                lower: 12,
+                bigger: 6,
+                child: Column(
+                  children: <Widget>[
+                    buildListTile(
+                      context,
+                      title: '+48 123 456 789',
+                      icon: Icons.phone,
+                    ),
+                    buildListTile(
+                      context,
+                      title: 'biuro@nieruchomosci-waw.com',
+                      icon: Icons.email,
+                    ),
+                    buildListTile(
+                      context,
+                      title: 'Numer konta: 12 1234 1234 1234 1234 1234 1234',
+                      icon: Icons.attach_money,
+                    ),
+                  ],
+                ),
               )
             ],
           )
@@ -93,10 +91,7 @@ class ContactPage extends StatelessWidget {
           ),
           title: Text(
             title,
-            style: Theme
-                .of(context)
-                .textTheme
-                .headline5,
+            style: Theme.of(context).textTheme.headline5,
           ),
         ),
       ),

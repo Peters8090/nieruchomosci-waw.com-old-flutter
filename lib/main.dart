@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nieruchomosci_waw_com/pages/contact_page.dart';
-import 'package:nieruchomosci_waw_com/pages/home_page.dart';
+
+import 'pages/contact_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(MyApp());

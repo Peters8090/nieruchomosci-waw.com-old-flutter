@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:nieruchomosci_waw_com/widgets/utility/constants.dart';
 
+import '../../widgets/utility/constants.dart';
 
 // credits https://pub.dev/packages/responsive_grid
 
@@ -9,8 +9,7 @@ double _refWidth = 375;
 double _scalingFactor;
 double _width;
 
-
-void initScaling(BuildContext context){
+void initScaling(BuildContext context) {
   var mq = MediaQuery.of(context);
   _width = mq.size.width < mq.size.height ? mq.size.width : mq.size.height;
   _scalingFactor = _width / _refWidth;
@@ -18,14 +17,13 @@ void initScaling(BuildContext context){
   print("width => $_width");
 }
 
-double scale(double dimension){
-  if (_width == null){
+double scale(double dimension) {
+  if (_width == null) {
     throw Exception("You must call init() before any use of scale()");
   }
   //
   return dimension * _scalingFactor;
 }
-
 
 //
 // responsive grid layout
@@ -102,8 +100,7 @@ class ResponsiveGridCol extends StatelessWidget {
   final List<int> _config = new List(5);
   final Widget child;
 
-  ResponsiveGridCol(
-      {int bigger=12, int lower, @required this.child}) {
+  ResponsiveGridCol({int bigger = 12, int lower, @required this.child}) {
     _config[_GridTier.bigger.index] = bigger;
     _config[_GridTier.lower.index] = lower ?? _config[_GridTier.lower.index];
   }
@@ -133,10 +130,10 @@ class ResponsiveGridList extends StatelessWidget {
 
   ResponsiveGridList(
       {this.desiredItemWidth,
-        this.minSpacing,
-        this.squareCells = false,
-        this.scroll = true,
-        this.children});
+      this.minSpacing,
+      this.squareCells = false,
+      this.scroll = true,
+      this.children});
 
   @override
   Widget build(BuildContext context) {

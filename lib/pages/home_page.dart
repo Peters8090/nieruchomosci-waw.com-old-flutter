@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nieruchomosci_waw_com/widgets/header/widgets/app_drawer.dart';
-import 'package:nieruchomosci_waw_com/widgets/utility/responsive_text_theme.dart';
-import 'package:nieruchomosci_waw_com/widgets/header/header.dart';
+
+import '../widgets/header/header.dart';
+import '../widgets/header/widgets/app_drawer.dart';
+import '../widgets/utility/responsive_text_theme.dart';
 
 class HomePage extends StatelessWidget {
   static const routeName = '/';
